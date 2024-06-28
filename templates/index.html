@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yapay Zeka Quiz</h1>
+    <form method="post" action="{{ url_for('submit') }}">
+        <p>1. Aşağıdakilerden hangisi Python kullanarak yapay zeka geliştirmede yaygın bir uygulama değildir?</p>
+        <input type="radio" name="question1" value="a"> a) Görüntü sınıflandırma<br>
+        <input type="radio" name="question1" value="b"> b) Doğal dil işleme<br>
+        <input type="radio" name="question1" value="c"> c) Oyun geliştirme<br>
+        <input type="radio" name="question1" value="d"> d) Konuşma tanıma<br>
+
+        <p>2. Bilgisayarla görme projelerinde kullanılan “Convolutional Neural Network” (CNN) türü neye odaklanır?</p>
+        <input type="radio" name="question2" value="a"> a) Zaman serisi analizi<br>
+        <input type="radio" name="question2" value="b"> b) Görüntü işleme<br>
+        <input type="radio" name="question2" value="c"> c) Doğal dil işleme<br>
+        <input type="radio" name="question2" value="d"> d) Anomali tespiti<br>
+
+        <p>3. Hangi görev, doğal dil işlemeyi (NLP) içermez?</p>
+        <input type="radio" name="question3" value="a"> a) Duygu analizi<br>
+        <input type="radio" name="question3" value="b"> b) Ses tanıma<br>
+        <input type="radio" name="question3" value="c"> c) Dil çevirisi<br>
+        <input type="radio" name="question3" value="d"> d) Görüntü sınıflandırma<br>
+
+        <p>4. Python'da bir yapay zeka modeli nasıl oluşturulur? (Lütfen kısa bir açıklama yapınız)</p>
+        <textarea name="question4" rows="4" cols="50"></textarea><br>
+
+        <p>5. Python'da bir yapay zeka modelini hangi uygulamalar için kullanabilirsiniz? (Lütfen kısa bir açıklama yapınız)</p>
+        <textarea name="question5" rows="4" cols="50"></textarea><br>
+
+        <p>Kullanıcı Adı:</p>
+        <input type="text" name="username" required><br><br>
+
+        <input type="submit" value="Submit Answer">
+    </form>
+
+    <footer>
+        Developed by Muhammet Uzun
+        <div class="author-info">
+            <p>Muhammet Uzun, yapay zeka ve veri bilimi alanlarında uzmanlaşmış bir yazılımcıdır. Eğitim teknolojileri üzerine çalışmaktadır.</p>
+        </div>
+    </footer>
+</body>
+</html>
