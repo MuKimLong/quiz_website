@@ -33,7 +33,7 @@ quiz-app/
 ## Installation and Setup
 
 Clone the repository:
-git clone https://github.com/your-username/quiz-app.git
+git clone https://github.com/quiz_website/quiz-app.git
 cd quiz-app
 
 Create and activate a virtual environment:
