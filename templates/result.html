@@ -1,26 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Result</title>
     <style>
         body {
             position: relative;
             min-height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 10px;
-            background-color: #f1f1f1;
-            border-bottom-left-radius: 10px;
-        }
-
-        main {
-            text-align: center;
-            padding-top: 100px;
         }
 
         footer {
@@ -29,22 +16,14 @@
             left: 0;
             right: 0;
             text-align: center;
-            background-color: #f1f1f1;
-            padding: 10px;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <p>En Yüksek Puan: {{ best_score }}</p>
-    </header>
-
-    <main>
-        <h1>Quiz Sonucu</h1>
-        <p>Aldığınız puan: {{ score }}</p>
-    </main>
+    <h1>Quiz Result</h1>
+    <p>Your Score: {{ score }}</p>
+    <p>Best Score: {{ best_score }}</p>
+    <a href="/">Back to Quiz</a>
 
     <footer>
         Developed by Muhammet Uzun
