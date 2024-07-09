@@ -33,7 +33,7 @@ quiz-app/
 ## Installation and Setup
 
 Clone the repository:
-git clone https://github.com/quiz_website/quiz-app.git
+git clone https://github.com/your-username/quiz-app.git
 cd quiz-app
 
 Create and activate a virtual environment:
@@ -53,3 +53,12 @@ http://127.0.0.1:5000
 
 On the main page (index.html), users can enter their username and answer the quiz questions.
 After submitting the answers, users are redirected to the result page (result.html) where they can see their score and the highest score achieved.
+
+![quiz2](https://github.com/MuKimLong/quiz_website/assets/108682681/6bc2c4ac-7e32-4521-b0d8-ed90e3620d39)
+![quiz2bucuk](https://github.com/MuKimLong/quiz_website/assets/108682681/f508cf8c-cd3a-4efd-9661-93196868a701)
+![quiz3](https://github.com/MuKimLong/quiz_website/assets/108682681/30c87fcc-64b1-4b29-a8c6-001b20f938c2)
+![quiz4](https://github.com/MuKimLong/quiz_website/assets/108682681/99173f30-1410-4424-b30d-52b21cdc7ff6)
+
+
+
+
