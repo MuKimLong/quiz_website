@@ -16,8 +16,7 @@ class User(db.Model):
 
 def check_answer(user_answer, correct_answers):
     for correct_answer in correct_answers:
-        result = nlp(question="Bu doğru bir cevap mı?", context=user_answer)
-        if result['score'] > 0.6 and correct_answer in result['answer']:
+        if user_answer.lower() in correct_answer.lower():
             return True
     return False
 
@@ -57,7 +56,6 @@ def submit():
         'question4': request.form.get('question4'),
         'question5': request.form.get('question5')
     }
-
     for q, a in user_mcq_answers.items():
         if mcq_answers[q] == a:
             score += 20
@@ -67,9 +65,14 @@ def submit():
     if check_answer(user_open_ended_answers['question5'], open_ended_answers['question5']):
         score += 20
 
+
     username = request.form.get('username')
-    user = User(username=username, score=score)
-    db.session.add(user)
+    user = User.query.filter_by(username=username).first()
+    if user:
+        user.score = score
+    else:
+        user = User(username=username, score=score)
+        db.session.add(user)
     db.session.commit()
 
     best_score = User.query.order_by(User.score.desc()).first().score
